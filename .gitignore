@@ -9,6 +9,11 @@ build/
 .env
 .env.local
 
+# Scripts containing sensitive information
+scripts/generate-*.js
+scripts/fix-*.js
+scripts/update-*.js
+
 # Logs
 logs
 *.log
