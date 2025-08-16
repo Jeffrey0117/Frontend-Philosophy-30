@@ -1,9 +1,4 @@
-# 柏拉圖的物與影：為何 `typeof new Array()` 是物件？
-
-# 柏拉圖的物與影：為何 `typeof new Array()` 是物件？
-
-## 前言
-
+# 柏拉圖的物與影：為何 typeof new Array() 是物件？
 在柏拉圖的哲學中，存在著一種稱為「理型論」的理論，認為真實的世界並非我們所看見的物質世界，而是一個理念的世界。物質世界中的物件，不過是理念的模仿或影子。在JavaScript的型別系統中，我們也能發現相似的道理。
 
 ## JavaScript的型別系統
@@ -28,8 +23,7 @@ JavaScript的型別系統大致上分為基本型別（Primitive）和物件型�
 let arr = new Array();
 console.log(arr instanceof Array); // true
 console.log(Array.isArray(arr)); // true
-```
-
+```javascript
 ## 如何正確使用型別轉換來解決實際問題
 
 在實際的開發過程中，我們需要了解並正確使用JavaScript的型別轉換。這不僅需要了解隱含型別轉換的規則，還要理解原型鏈和`instanceof`的工作原理。

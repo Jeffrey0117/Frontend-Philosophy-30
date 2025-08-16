@@ -1,5 +1,4 @@
-﻿# Chapter 01 — 柏拉圖的學習三分法：主動、被動與清單的辯證
-
+# 柏拉圖的學習三分法：主動、被動與清單的辯證
 > “The beginning is the most important part of the work.” —— Plato
 
 柏拉圖在《理想國》中談到，教育的關鍵，不僅是傳遞知識，更是引導靈魂轉向光明。

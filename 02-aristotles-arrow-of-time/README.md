@@ -1,7 +1,4 @@
-﻿# Chapter 02 — 亞里斯多德的時間之箭：async 與 defer 的平行與順序** 
-
-## 哲學概念 (Philosophical Concept)
-
+# 亞里斯多德的時間之箭：async 與 defer 的平行與順序
 亞里斯多德認為，時間是一種「運動的度量」，它有明確的先後順序，過去不可逆，未來尚未到來。
 在前端世界中，JavaScript 的載入與執行順序，正好是一種時間秩序的縮影。
 `async` 與 `defer` 便是我們操控「時間箭頭」的方式——決定腳本在網頁生命週期中，何時被觸發、何時被執行。
@@ -38,8 +35,7 @@
 
 <!-- defer -->
 <script src="app.js" defer></script>
-```
-
+```javascript
 執行時序示意：
 
 ```plaintext
