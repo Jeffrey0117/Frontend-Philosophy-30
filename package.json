@@ -1,0 +1,17 @@
+{
+  "name": "philosophical-frontend-30",
+  "version": "1.0.0",
+  "description": "一口氣踏上前端進階的求知之路。 那些在開發中縈繞心頭、似懂非懂的問題，這裡都有它的答案——或至少，給你一個新的提問方式。",
+  "main": "generate-chapters.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bottleneck": "^2.19.5",
+    "dotenv": "^17.2.1",
+    "openai": "^4.0.0"
+  }
+}

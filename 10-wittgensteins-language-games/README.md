@@ -1,17 +1,57 @@
-﻿# wittgensteins language games
+# 維根斯坦的語言遊戲：一般函式與箭頭函式的界線
 
-## 哲學概念 (Philosophical Concept)
+## 維根斯坦的語言遊戲：一般函式與箭頭函式的界線
 
-## 技術主題 (Technical Topic)
+**哲學概念：JavaScript 函式與語言遊戲**
 
-## 程式範例 (Code Examples)
+JavaScript函式的世界，猶如維根斯坦哲學中的語言遊戲。在這個遊戲中，我們遵照既定的規則，像是`this`綁定、建構函式、`arguments`物件等，使用不同的詞彙與結構來形塑我們的程式語言。就如同維根斯坦認為語言的意義來自於其使用的情境，JavaScript函式的意義也來自於其在程式中的應用場景。
 
-`javascript
-// 範例程式碼將放在這裡
-`
+**技術解析：機制與相互關係**
 
-## 哲學與技術的對話 (Philosophy-Tech Dialogue)
+在JavaScript的世界中，`this`綁定是一種專屬於每個函式的內部參數，代表該函式被調用時的上下文。而建構函式則是一種特殊的函式，用來初始化一個新建的物件。`arguments`物件則提供了一種方式，讓我們可以在函式內部取得該函式被呼叫時的所有參數。
 
-## 延伸思考 (Further Thoughts)
+然而，在箭頭函式中，`this`、`arguments`及建構函式的行為都有所不同。箭頭函式中的`this`是在該函式被定義時就已經綁定，而非在呼叫時才綁定。`arguments`在箭頭函式中並未被定義，而且箭頭函式也不能作為建構函式使用。
 
-## 參考資料 (References)
+**實用建議：`this`綁定的正確使用**
+
+要正確使用`this`綁定，我們需要理解其在不同情境下的行為。在一般的函式中，`this`的值會在函式被呼叫時設定；在箭頭函式中，`this`的值則在函式被定義時就已經設定。因此，如果我們需要在函式內部維護一個對外部環境的參考，箭頭函式會是一個很好的選擇。
+
+**程式範例：應用場景與最佳實踐**
+
+考慮一個經典的範例，我們有一個物件，需要在一段時間後改變其屬性的值：
+
+```javascript
+var obj = {
+  value: 0,
+  increment: function() {
+    setTimeout(function() {
+      this.value++;
+      console.log(this.value);
+    }, 1000);
+  }
+};
+
+obj.increment();  // NaN
+```
+
+這個例子中，`this`在`setTimeout`的回調函式中，並不會指向`obj`。在這種情況下，我們可以使用箭頭函式來解決這個問題：
+
+```javascript
+var obj = {
+  value: 0,
+  increment: function() {
+    setTimeout(() => {
+      this.value++;
+      console.log(this.value);
+    }, 1000);
+  }
+};
+
+obj.increment();  // 1
+```
+
+**哲學與技術的對話：JavaScript 函式與維根斯坦哲學的對照**
+
+正如維根斯坦語言遊戲中，語言的意義來自於其使用的情境，JavaScript函式的行為也取決於其被呼叫的上下文。此外，我們可以透過改變函式的形式（例如使用箭頭函式），來改變函式的行為，這就像是在語言遊戲中換一種遊戲規則，創造出新的語言結構與意義。
+
+學習JavaScript函式，就像是學習一種語言遊戲，我們需要理解其規則，並在實踐中找出最適合的遊戲策略。只有這樣，我們才能在這個遊戲中獲得勝利，撰寫出高效、優雅的程式碼。
